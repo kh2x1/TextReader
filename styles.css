@@ -1,0 +1,128 @@
+/* إعادة تعيين بعض الأنماط الافتراضية */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Tajawal', sans-serif;
+    background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: #333;
+}
+
+.container {
+    background: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    max-width: 600px;
+    text-align: center;
+}
+
+h1 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    color: #3498db;
+}
+
+.upload-section {
+    margin-bottom: 1.5rem;
+}
+
+.upload-label {
+    display: inline-block;
+    background: #3498db;
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.upload-label:hover {
+    background: #2980b9;
+}
+
+.upload-label input {
+    display: none;
+}
+
+.language-select {
+    margin: 1rem 0;
+}
+
+.language-select label {
+    font-size: 1rem;
+    margin-right: 0.5rem;
+}
+
+.language-select select {
+    padding: 0.5rem;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    font-size: 1rem;
+}
+
+button {
+    background: #2ecc71;
+    color: white;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    margin-top: 1rem;
+    width: 100%;
+}
+
+button:hover {
+    background: #27ae60;
+}
+
+.output-section {
+    margin-top: 1.5rem;
+    padding: 1rem;
+    background: #f9f9f9;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    min-height: 100px;
+    text-align: right;
+}
+
+#extractedText {
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+/* تصميم Spinner */
+.spinner {
+    border: 5px solid #f3f3f3;
+    border-top: 5px solid #3498db;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 1s linear infinite;
+    margin: 20px auto;
+    display: none;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* رسالة تأكيد تحميل الملف */
+.success-message {
+    background: #2ecc71;
+    color: white;
+    padding: 0.75rem;
+    border-radius: 5px;
+    margin-top: 1rem;
+    display: none; /* مخفي بشكل افتراضي */
+}
