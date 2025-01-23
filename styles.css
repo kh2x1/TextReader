@@ -11,8 +11,9 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    min-height: 100vh;
     color: #333;
+    padding: 1rem;
 }
 
 .container {
@@ -20,7 +21,7 @@ body {
     padding: 2rem;
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    width: 90%;
+    width: 100%;
     max-width: 600px;
     text-align: center;
 }
@@ -43,6 +44,8 @@ h1 {
     border-radius: 5px;
     cursor: pointer;
     transition: background 0.3s ease;
+    width: 100%;
+    max-width: 200px;
 }
 
 .upload-label:hover {
@@ -67,6 +70,8 @@ h1 {
     border-radius: 5px;
     border: 1px solid #ddd;
     font-size: 1rem;
+    width: 100%;
+    max-width: 200px;
 }
 
 button {
@@ -79,6 +84,7 @@ button {
     transition: background 0.3s ease;
     margin-top: 1rem;
     width: 100%;
+    max-width: 200px;
 }
 
 button:hover {
@@ -125,4 +131,53 @@ button:hover {
     border-radius: 5px;
     margin-top: 1rem;
     display: none; /* مخفي بشكل افتراضي */
+}
+
+/* Media Queries للتجاوب */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    .upload-label, .language-select select, button {
+        max-width: 100%;
+    }
+
+    .language-select {
+        text-align: center;
+    }
+
+    .language-select select {
+        margin-top: 0.5rem;
+    }
+
+    .output-section {
+        padding: 0.75rem;
+    }
+
+    #extractedText {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 1rem;
+    }
+
+    h1 {
+        font-size: 1.25rem;
+    }
+
+    .upload-label, .language-select select, button {
+        padding: 0.5rem 1rem;
+    }
+
+    .output-section {
+        padding: 0.5rem;
+    }
+
+    #extractedText {
+        font-size: 0.9rem;
+    }
 }
